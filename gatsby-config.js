@@ -1,11 +1,28 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: 'Lead Construction',
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `David Kindler`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        // The base url to your WP site.
+        baseUrl: 'leader.test:8888',
+        // WP.com sites set to true, WP.org set to false
+        hostingWPCOM: false,
+        // The protocol. This can be http or https.
+        protocol: 'http',
+        // Use 'Advanced Custom Fields' Wordpress plugin
+        useACF: false,
+        auth: {},
+        // Set to true to debug endpoints on 'gatsby build'
+        verboseOutput: false,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
