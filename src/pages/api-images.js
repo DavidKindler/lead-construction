@@ -1,6 +1,6 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+// import { graphql } from 'gatsby'
 import axios from 'axios'
 import Layout from "../components/layout"
 // import SEO from "../components/seo"
@@ -71,25 +71,23 @@ export default class ApiImages extends React.Component {
 //   }),
 // }
 
-export const pageQuery = graphql`
-  query {
-  swapi {
-    posts {
-      edges {
-        node {
-          
-          title
-          featuredImage {
-            srcSet
-          }
-        }
-      }
-    }
-  }
-}
+// export const pageQuery = graphql`
+//   query {
+//   swapi {
+//     posts {
+//       edges {
+//         node {
 
-  
-`
+//           title
+//           featuredImage {
+//             srcSet
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `
 
 
 // export const pageQuery = graphql`
