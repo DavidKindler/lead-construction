@@ -24,6 +24,18 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "SWAPI",
+        // This is field under which it's accessible
+        fieldName: "swapi",
+        // Url to query from
+        url: "http://leader.test:8888/graphql",
+        refetchInterval: 60,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -44,6 +56,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      // Removes unused css rules
+      resolve: 'gatsby-plugin-purgecss',
+      options: {
+        // Activates purging in gatsby develop
+        develop: true,
+        // Purge only the main css file
+        // purgeOnly: ['/all.sass'],
+      },
+    }, // must be after other CSS plugins
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
