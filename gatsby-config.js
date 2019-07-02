@@ -33,8 +33,54 @@ module.exports = {
         // Url to query from
         url: "http://leader.test:8888/graphql",
         refetchInterval: 60,
-      },
+      }
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "WPGQL",
+        // This is field under which it's accessible
+        fieldName: "wpgql",
+        // Url to query from
+        url: "http://leader.test:8888/graphql",
+        // refetchInterval: 60,
+        headers: {},
+        fetchOptions: {}
+        // createLink: (pluginOptions) => {
+        //   return createHttpLink({
+        //     uri: 'https://leader.test:8888/graphql',
+        //     // headers: {
+        //     //   'Authorization': `bearer ${process.env.GITHUB_TOKEN}`,
+        //     // },
+        //     fetch,
+        //   })
+        // }
+      }
+    },
+
+    // {
+    //   resolve: "gatsby-source-graphql",
+    //   options: {
+    //     // This type will contain remote schema Query type
+    //     typeName: "WPGQL",
+    //     // This is field under which it's accessible
+    //     fieldName: "wpgql",
+    //     // Url to query from
+    //     // url: "http://leader.test:8888/graphql",
+    //     // refetchInterval: 60,
+    //     createLink: (pluginOptions) => {
+    //       return createHttpLink({
+    //         uri: 'https://leader.test:8888/graphql',
+    //         // headers: {
+    //         //   'Authorization': `bearer ${process.env.GITHUB_TOKEN}`,
+    //         // },
+    //         fetch,
+    //       })
+    //     }
+    //   }
+    // },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
