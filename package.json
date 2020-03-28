@@ -38,6 +38,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "audit": "./bin/audit.sh",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
