@@ -28,7 +28,7 @@
     "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "snyk": "^1.305.0"
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
