@@ -18,7 +18,7 @@
     "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-source-graphql": "^2.1.33",
+    "gatsby-source-graphql": "^2.13.0",
     "gatsby-source-wordpress": "^3.1.58",
     "gatsby-transformer-sharp": "^2.2.0",
     "graphql": "^14.6.0",
